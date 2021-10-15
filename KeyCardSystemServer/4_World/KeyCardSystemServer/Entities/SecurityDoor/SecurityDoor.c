@@ -81,6 +81,25 @@ modded class KeyCard_Door_Base {
 
     override void Open( int index ) 
     {
+        /* Notification System */
+
+        if (1 == 1) /*  ToDo: Replace with a check whether to use vanilla notification system (sourced from config)  */
+        {
+            string Message = "The door at " + this.GetDescription() + " is being opened."
+            NotificationSystem.AddNotificationExtended (5,
+                                                        "KeyCard Door Opened!",
+                                                        Message,
+                                                        ""
+                                                        );
+        }
+        else
+            ; /* Add support for a notifications mod */
+
+        /* Notification System */
+
+
+
+
         this.OpenDoor( index );
         m_persistanceData.SetIsOpen( index, true);
 
