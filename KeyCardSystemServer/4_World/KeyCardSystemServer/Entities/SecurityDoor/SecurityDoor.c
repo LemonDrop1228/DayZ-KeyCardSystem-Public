@@ -89,8 +89,7 @@ modded class KeyCard_Door_Base {
             NotificationSystem.AddNotificationExtended (5,
                                                         "KeyCard Door Opened!",
                                                         Message,
-                                                        ""
-                                                        );
+                                                        null);
         }
         else
             ; /* Add support for a notifications mod */
